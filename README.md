@@ -6,6 +6,6 @@ O jogo se baseia em um jogo de luta de rua, onde os adversários se enfrentam to
 O propósito é estudar conceitos de detecção de colisão entre dois objetos e a comunicação dessa colisão a todos os participantes.
 Também em atualizar em tempo-real sobre as mudanças de estado dos personagens, como: posição, quantidade de vida, status (andando, parado, atacando).
 
-![](https://imgur.com/a/esbc0iC)
+![](https://i.imgur.com/UEjB2DR.mp4)
 
 ### Encontre a [versão Cliente aqui](https://github.com/rodrigomolter/jogomultiplayer-cliente)
