@@ -28,6 +28,8 @@ Essa tecla vem em formato de `keyCode`, onde cada tecla tem um número único. E
 A resposta ao cliente segue o seguinte padrão: "AÇÃO, ID, VIDA, X, Y, APARENCIA"
 Essa resposta é replicada a todos os clientes que estão conectados, garantindo que todos tenham o mesmo contexto.
 
+## Interface Gráfica
+A interface gráfica e a atualização dos componentes, como animação dos personagens, barra de vida, etc. foi feita utilizando do [Processing](https://processing.org/). O Processing é voltado para a criação de projetos interativos, especialmente em contextos de arte, design, visualização de dados e educação. Construido em cima da linguagem java tem como objetivo facilitar a criação de conteúdo visual e interativo, permitindo que os programadores se concentrem mais na expressão criativa do que na complexidade técnica. Ele simplifica muitas tarefas comuns de programação gráfica, como desenho de formas, manipulação de imagens e animações.
 
-### Cliente
+## Cliente
 Encontre a [versão Cliente desse projeto aqui](https://github.com/rodrigomolter/jogomultiplayer-cliente)
