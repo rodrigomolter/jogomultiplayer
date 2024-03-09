@@ -22,10 +22,13 @@ Isso é essencial, pois não há como o cliente saber quando haverá movimentaç
 ## Arquitetura
 O desenvolvimento foi feito utlizando de `Threads`, onde cada novo cliente que se conectar ao servidor é uma thread diferente, tratando as ações do usuário paralelamente.
 
-Atualmente, a única informação que o cliente manda para o servidor é a tecla pressionada pelo usuário
+Atualmente, a única informação que o cliente manda para o servidor é a tecla pressionada pelo usuário.
 Essa tecla vem em formato de `keyCode`, onde cada tecla tem um número único. Ex: A tecla enter corresponde ao número 10
 
-A resposta ao cliente segue o seguinte padrão: "AÇÃO, ID, VIDA, X, Y, APARENCIA"
+A resposta ao cliente segue o seguinte padrão: 
+```
+"AÇÃO, ID, VIDA, X, Y, APARENCIA"
+```
 Essa resposta é replicada a todos os clientes que estão conectados, garantindo que todos tenham o mesmo contexto.
 
 ## Interface Gráfica
