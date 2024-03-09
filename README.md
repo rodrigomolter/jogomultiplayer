@@ -20,7 +20,7 @@ Isso é essencial, pois não há como o cliente saber quando haverá movimentaç
 ![](https://github.com/rodrigomolter/jogomultiplayer-servidor/blob/main/runtime.gif) 
 
 ## Arquitetura
-O desenvolvimento foi feito utlizando de `Threads`, onde cada novo cliente que se conectar ao servidor é uma thread diferente, tratando as ações do usuário paralelamente.
+O desenvolvimento foi feito utlizando de `Threads`, onde cada novo cliente que se conectar ao servidor é uma thread diferente, tratando de cada usuário paralelamente.
 
 Atualmente, a única informação que o cliente manda para o servidor é a tecla pressionada pelo usuário.
 Essa tecla vem em formato de `keyCode`, onde cada tecla tem um número único. Ex: A tecla enter corresponde ao número 10.
@@ -32,7 +32,29 @@ A resposta ao cliente segue o seguinte padrão:
 Essa resposta é replicada a todos os clientes que estão conectados, garantindo que todos tenham o mesmo contexto.
 
 ## Interface Gráfica
-A interface gráfica e a atualização dos componentes, como animação dos personagens, barra de vida, etc. foi feita utilizando do [Processing](https://processing.org/). O Processing é voltado para a criação de projetos interativos, especialmente em contextos de arte, design, visualização de dados e educação. Construido em cima da linguagem java tem como objetivo facilitar a criação de conteúdo visual e interativo, permitindo que os programadores se concentrem mais na expressão criativa do que na complexidade técnica. Ele simplifica muitas tarefas comuns de programação gráfica, como desenho de formas, manipulação de imagens e animações.
+A interface gráfica e a atualização dos componentes, como animação dos personagens, barra de vida, etc. foi feita utilizando do [Processing](https://processing.org/).
+
+O Processing é voltado para a criação de projetos interativos, especialmente em contextos de arte, design, visualização de dados e educação. Construido em cima da linguagem java tem como objetivo facilitar a criação de conteúdo visual e interativo, permitindo que os programadores se concentrem mais na expressão criativa do que na complexidade técnica. Ele simplifica muitas tarefas comuns de programação gráfica, como desenho de formas, manipulação de imagens e animações.
+
+## Eai, Acertei? - Detecção de Colisão
+
+Em muitos sistemas de jogos e simulações, os personagens e objetos são frequentemente tratados como retângulos para simplificar a detecção de colisões. Um retângulo invisível em volta dos personagens os acompanha para ajudar a identificar com mais precisão e agilidade caso haja uma colisão.
+
+A razão para isso é a facilidade de cálculo e implementação. Tratar personagens como retângulos simplifica a detecção de colisões, pois os retângulos podem ser representados por coordenadas de posição (por exemplo, posX, posY) e dimensões (largura e altura).<br>
+
+O algoritmo verifica se os lados direito e esquerdo do retângulo atual estão dentro dos limites do outro retângulo em questão. Além disso, verifica se a parte inferior e superior do retângulo atual se sobrepõem com o outro retângulo. Se todas as condições forem atendidas, é considerada uma colisão e uma ação, como a aplicação de dano, pode ser tomada. Este algoritmo é útil em jogos e simulações onde é necessário detectar interações entre objetos retangulares.
+
+No nosso caso, essa verificação é feita toda vez que algum personagem usa o comando de atacar. Então, é necessário verificar a colisão com todos os personagens conectados.
+```
+if (posX + detectionA < p.getPosX() + p.getWidth() &&
+           posX + width + detectionB > p.getPosX() &&
+           posY < p.getPosY() + p.getHeight() &&
+           height + (posY) > p.getPosY() ) {
+
+   p.levouDano();
+   return true;
+}
+```
 
 ## Cliente
 Encontre a [versão Cliente desse projeto aqui](https://github.com/rodrigomolter/jogomultiplayer-cliente)
