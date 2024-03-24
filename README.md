@@ -45,7 +45,7 @@ A razão para isso é a facilidade de cálculo e implementação. Tratar persona
 O algoritmo verifica se os lados direito e esquerdo do retângulo atual estão dentro dos limites do outro retângulo em questão. Além disso, verifica se a parte inferior e superior do retângulo atual se sobrepõem com o outro retângulo. Se todas as condições forem atendidas, é considerada uma colisão e uma ação, como a aplicação de dano, pode ser tomada. Este algoritmo é útil em jogos e simulações onde é necessário detectar interações entre objetos retangulares.
 
 No nosso caso, essa verificação é feita toda vez que algum personagem usa o comando de atacar. Então, é necessário verificar a colisão com todos os personagens conectados.
-```
+```java
 if (posX + detectionA < p.getPosX() + p.getWidth() &&
            posX + width + detectionB > p.getPosX() &&
            posY < p.getPosY() + p.getHeight() &&
