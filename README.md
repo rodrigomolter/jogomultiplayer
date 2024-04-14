@@ -56,7 +56,7 @@ if (posX + detectionA < p.getPosX() + p.getWidth() &&
 
 ## Cliente 💻
 Para rodar o jogo é necessário a versão _CLIENTE_. <br>
-Encontre a [versão Cliente desse projeto aqui](https://github.com/rodrigomolter/ultimatekombatonline) <br>
+Encontre a [versão Cliente desse projeto aqui](https://github.com/rodrigomolter/ultimatekombatonline). <br>
 
 ## Apoie o projeto 🙌
 
