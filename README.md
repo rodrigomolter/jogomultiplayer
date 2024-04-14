@@ -1,4 +1,4 @@
-# Jogo Multiplayer: Versão Servidor
+# ULTIMATE KOMBAT ONLINE 🥊
 
 Desenvolvimento de um jogo **multiplayer** em JAVA com uma comunicação cliente-servidor, onde tem o propósito de aprender sobre comunicação, sincronização e tolerância a falhas em sistemas distribuídos.
 
@@ -15,11 +15,9 @@ O CLIENTE apenas exibe os dados que o SERVIDOR informa, ou seja, todo o CONTEXTO
 O servidor pode muito bem enviar informações ao cliente, mesmo que o mesmo não tenha requisitado. 
 Isso é essencial, pois não há como o cliente saber quando haverá movimentação de um outro jogador.
 
-
-#### Pequena demonstração da execução, enquanto ainda em desenvolvimento:
 ![](https://github.com/rodrigomolter/jogomultiplayer-servidor/blob/main/runtime.gif) 
 
-## Arquitetura
+## Arquitetura 🏛️
 O desenvolvimento foi feito utlizando de `Threads`, onde cada novo cliente que se conectar ao servidor é uma thread diferente, tratando de cada usuário paralelamente.
 
 Atualmente, a única informação que o cliente manda para o servidor é a tecla pressionada pelo usuário.
@@ -31,12 +29,12 @@ A resposta ao cliente segue o seguinte padrão:
 ```
 Essa resposta é replicada a todos os clientes que estão conectados, garantindo que todos tenham o mesmo contexto.
 
-## Interface Gráfica
+## Interface Gráfica 🎨
 A interface gráfica e a atualização dos componentes, como animação dos personagens, barra de vida, etc. foi feita utilizando do [Processing](https://processing.org/).
 
 > O Processing é voltado para a criação de projetos interativos, especialmente em contextos de arte, design, visualização de dados e educação. Construido em cima da linguagem java tem como objetivo facilitar a criação de conteúdo visual e interativo, permitindo que os programadores se concentrem mais na expressão criativa do que na complexidade técnica. Ele simplifica muitas tarefas comuns de programação gráfica, como desenho de formas, manipulação de imagens e animações.
 
-## Eai, Acertei? - Detecção de Colisão
+## Eai, Acertei? - Detecção de Colisão 💥
 
 Em muitos sistemas de jogos e simulações, os personagens e objetos são frequentemente tratados como retângulos para simplificar a detecção de colisões. Um retângulo invisível em volta dos personagens os acompanha para ajudar a identificar com mais precisão e agilidade caso haja uma colisão.
 
@@ -56,5 +54,14 @@ if (posX + detectionA < p.getPosX() + p.getWidth() &&
 }
 ```
 
-## Cliente
-Encontre a [versão Cliente desse projeto aqui](https://github.com/rodrigomolter/jogomultiplayer-cliente)
+## Cliente 💻
+Para rodar o jogo é necessário a versão _CLIENTE_. <br>
+Encontre a [versão Cliente desse projeto aqui](https://github.com/rodrigomolter/ultimatekombatonline) <br>
+
+## Apoie o projeto 🙌
+
+Se você quer apoiar, deixe uma ⭐.
+
+___
+
+Made with love 🧡 by [Rodrigo Molter](https://www.linkedin.com/in/rodrigo-molter/)
