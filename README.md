@@ -40,7 +40,7 @@ Em muitos sistemas de jogos e simulações, os personagens e objetos são freque
 
 A razão para isso é a facilidade de cálculo e implementação. Tratar personagens como retângulos simplifica a detecção de colisões, pois os retângulos podem ser representados por coordenadas de posição (por exemplo, posX, posY) e dimensões (largura e altura).<br>
 
-O algoritmo verifica se os lados direito e esquerdo do retângulo atual estão dentro dos limites do outro retângulo em questão. Além disso, verifica se a parte inferior e superior do retângulo atual se sobrepõem com o outro retângulo. Se todas as condições forem atendidas, é considerada uma colisão e uma ação, como a aplicação de dano, pode ser tomada. Este algoritmo é útil em jogos e simulações onde é necessário detectar interações entre objetos retangulares.
+A detecção de colisão é feito através do [algorítmo de detecção de colisão AABB](https://learnopengl.com/In-Practice/2D-Game/Collisions/Collision-detection). O algoritmo verifica se os lados direito e esquerdo do retângulo atual estão dentro dos limites do outro retângulo em questão. Além disso, verifica se a parte inferior e superior do retângulo atual se sobrepõem com o outro retângulo. Se todas as condições forem atendidas, é considerada uma colisão e uma ação, como a aplicação de dano, pode ser tomada. Este algoritmo é útil em jogos e simulações onde é necessário detectar interações entre objetos retangulares.
 
 No nosso caso, essa verificação é feita toda vez que algum personagem usa o comando de atacar. Então, é necessário verificar a colisão com todos os personagens conectados.
 ```java
